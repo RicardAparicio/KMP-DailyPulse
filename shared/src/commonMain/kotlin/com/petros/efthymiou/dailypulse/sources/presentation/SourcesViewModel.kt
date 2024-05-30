@@ -1,13 +1,13 @@
 package com.petros.efthymiou.dailypulse.sources.presentation
 
-import com.petros.efthymiou.dailypulse.BaseViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.petros.efthymiou.dailypulse.sources.application.SourcesUseCase
-import com.petros.efthymiou.dailypulse.sources.presentation.SourcesState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class SourcesViewModel(private val useCase: SourcesUseCase) : BaseViewModel() {
+class SourcesViewModel(private val useCase: SourcesUseCase): ViewModel() {
 
     private val _sourcesState =
         MutableStateFlow(SourcesState(listOf(), true, null))
@@ -18,7 +18,7 @@ class SourcesViewModel(private val useCase: SourcesUseCase) : BaseViewModel() {
     }
 
     private fun getSources() {
-        scope.launch {
+        viewModelScope.launch {
             _sourcesState.emit(SourcesState(_sourcesState.value.sources, true, null))
 
             val sources = useCase.getSources()

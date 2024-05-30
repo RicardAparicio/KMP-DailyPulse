@@ -38,6 +38,7 @@ kotlin {
                 implementation(libs.kotlinx.datetime)
                 implementation(libs.koin.core)
                 implementation(libs.sql.coroutines.extensions)
+                implementation(libs.lifecycle.viewmodel.compose)
             }
         }
 

@@ -1,15 +1,15 @@
 package com.petros.efthymiou.dailypulse.articles.presentation
 
-import com.petros.efthymiou.dailypulse.BaseViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.petros.efthymiou.dailypulse.articles.application.ArticlesUseCase
-import com.petros.efthymiou.dailypulse.articles.presentation.ArticlesState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class ArticlesViewModel(
     private val useCase: ArticlesUseCase
-) : BaseViewModel() {
+): ViewModel() {
 
     private val _articlesState: MutableStateFlow<ArticlesState> =
         MutableStateFlow(ArticlesState(loading = true))
@@ -21,7 +21,7 @@ class ArticlesViewModel(
     }
 
     fun getArticles(forceFetch: Boolean = false) {
-        scope.launch {
+        viewModelScope.launch {
             _articlesState.emit(ArticlesState(loading = true, articles = _articlesState.value.articles))
 
             val fetchedArticles = useCase.getArticles(forceFetch)

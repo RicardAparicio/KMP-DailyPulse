@@ -1,19 +1,20 @@
 [versions]
-agp = "8.2.0-beta05"
-coilCompose = "2.5.0"
-kotlin = "1.9.10"
-compose = "1.5.1"
-accompanistSwiperefresh = "0.24.13-rc"
+agp = "8.2.2"
+coilCompose = "2.6.0"
+kotlin = "1.9.20"
+compose = "1.6.7"
+accompanistSwiperefresh = "0.30.0"
 compose-compiler = "1.5.3"
-compose-material3 = "1.1.2"
-androidx-activityCompose = "1.7.2"
-kotlinxCoroutinesCore = "1.7.3"
-lifecycleViewmodelKtx = "2.6.2"
-navigationCompose = "2.7.5"
+compose-material3 = "1.2.1"
+androidx-activityCompose = "1.9.0"
+kotlinxCoroutinesCore = "1.8.0"
+lifecycleViewmodelKtx = "2.8.1"
+navigationCompose = "2.7.7"
 ktorClient = "2.3.5"
 kotlinxDatetime = "0.4.1"
 koin = "3.4.3"
 sqlDelight = "2.0.0"
+lifecycle-viewmodel-compose = "2.8.0"
 
 [libraries]
 accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanistSwiperefresh" }
@@ -28,6 +29,7 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle-viewmodel-compose" }
 
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 
