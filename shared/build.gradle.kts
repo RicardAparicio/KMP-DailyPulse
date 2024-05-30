@@ -47,6 +47,7 @@ kotlin {
                 implementation(libs.androidx.lifecycle.viewmodel.ktx)
                 implementation(libs.ktor.client.android)
                 implementation(libs.sql.android.driver)
+                implementation(libs.koin.android)
             }
         }
 

@@ -1,4 +1,4 @@
-package com.petros.efthymiou.dailypulse.android.di
+package com.petros.efthymiou.dailypulse.di
 
 import com.petros.efthymiou.dailypulse.articles.presentation.ArticlesViewModel
 import com.petros.efthymiou.dailypulse.sources.presentation.SourcesViewModel

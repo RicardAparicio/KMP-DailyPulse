@@ -1,4 +1,4 @@
-package com.petros.efthymiou.dailypulse.android.di
+package com.petros.efthymiou.dailypulse.di
 
 import app.cash.sqldelight.db.SqlDriver
 import com.petros.efthymiou.dailypulse.db.DatabaseDriverFactory

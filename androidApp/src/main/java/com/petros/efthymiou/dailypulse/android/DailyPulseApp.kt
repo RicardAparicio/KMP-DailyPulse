@@ -1,8 +1,8 @@
 package com.petros.efthymiou.dailypulse.android
 
 import android.app.Application
-import com.petros.efthymiou.dailypulse.android.di.databaseModule
-import com.petros.efthymiou.dailypulse.android.di.viewModelsModule
+import com.petros.efthymiou.dailypulse.di.databaseModule
+import com.petros.efthymiou.dailypulse.di.viewModelsModule
 import com.petros.efthymiou.dailypulse.di.sharedKoinModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
